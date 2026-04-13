@@ -1,6 +1,6 @@
 ﻿namespace DistractionTracker.Interfaces
 {
-    public interface ISessionSevice
+    public interface ISessionService
     {
         public string PostSession();
     }

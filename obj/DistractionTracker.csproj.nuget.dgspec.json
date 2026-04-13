@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\workspace\\personal\\C# Learning\\DistractionTracker\\DistractionTracker.csproj": {}
+    "\\\\wsl.localhost\\Ubuntu\\home\\aashishgurungg\\projects\\DistractionTracker\\DistractionTracker.csproj": {}
   },
   "projects": {
-    "E:\\workspace\\personal\\C# Learning\\DistractionTracker\\DistractionTracker.csproj": {
+    "\\\\wsl.localhost\\Ubuntu\\home\\aashishgurungg\\projects\\DistractionTracker\\DistractionTracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\workspace\\personal\\C# Learning\\DistractionTracker\\DistractionTracker.csproj",
+        "projectUniqueName": "\\\\wsl.localhost\\Ubuntu\\home\\aashishgurungg\\projects\\DistractionTracker\\DistractionTracker.csproj",
         "projectName": "DistractionTracker",
-        "projectPath": "E:\\workspace\\personal\\C# Learning\\DistractionTracker\\DistractionTracker.csproj",
+        "projectPath": "\\\\wsl.localhost\\Ubuntu\\home\\aashishgurungg\\projects\\DistractionTracker\\DistractionTracker.csproj",
         "packagesPath": "C:\\Users\\acegr\\.nuget\\packages\\",
-        "outputPath": "E:\\workspace\\personal\\C# Learning\\DistractionTracker\\obj\\",
+        "outputPath": "\\\\wsl.localhost\\Ubuntu\\home\\aashishgurungg\\projects\\DistractionTracker\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -8,7 +8,7 @@ namespace DistractionTracker.Migrations
     {
         public override void Up()
         {
-            Create.Table("Sessions")
+            Create.Table("SessionsDb")
                 .WithColumn("Id").AsGuid().PrimaryKey().Identity()
                 .WithColumn("Username").AsString(100).NotNullable().Unique()
                 .WithColumn("Start Time").AsDateTime().WithDefault(SystemMethods.CurrentDateTime)
@@ -17,7 +17,7 @@ namespace DistractionTracker.Migrations
 
         public override void Down()
         {
-            Delete.Table("Sessions");
+            Delete.Table("SessionsDb");
         }
     }
 }

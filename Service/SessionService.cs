@@ -1,22 +1,20 @@
 ﻿using DistractionTracker.Interfaces;
+using DistractionTracker.Repository;
 
 namespace DistractionTracker.Service
 {
-    public class SessionService: ISessionSevice
+    public class SessionService: ISessionService
     {
-        private ILogger _logger;
-        public SessionService(ILogger logger) 
+        private readonly SessionRepository _repository;
+        public SessionService(SessionRepository repository) 
         {
-            _logger = logger;
+            _repository = repository;
         }
         
         public string PostSession()
         {
             string result = string.Empty;
-            try
-            {
-
-            }
+            Guid repo = _repository.CreateSession();
             return result;
         }
     }
