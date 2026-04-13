@@ -1,0 +1,21 @@
+services:
+# ------ PostgresSQL Service ----- #
+db:
+    image: postgres:latest
+    container_name: postgres_db
+    restart: always
+    environment:
+        POSTGRES_USER: 
+        POSTGRES_PASSWORD:
+        POSTGRES_DB:
+    ports: 
+        - "5432:5432"
+    volumes:
+        - pgdata:/var/lib/postgresql/data
+# ------ C# Backend API ------ #
+api:
+    build: .
+    # For when the build is complete and ready to ship #
+    # image: ash/distraction-tracker:latest #
+    container_name: dotnet_api
+    
