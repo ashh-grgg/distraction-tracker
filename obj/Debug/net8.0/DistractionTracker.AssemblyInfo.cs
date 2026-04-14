@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DistractionTracker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3aabf39b76929c49e5f82ea469f265d8649c5d6a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+068141af8cd63e5502f8b3a68af32932f7fdb8ea")]
 [assembly: System.Reflection.AssemblyProductAttribute("DistractionTracker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DistractionTracker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,21 +1,36 @@
 services:
 # ------ PostgresSQL Service ----- #
-db:
-    image: postgres:latest
-    container_name: postgres_db
-    restart: always
-    environment:
-        POSTGRES_USER: 
-        POSTGRES_PASSWORD:
-        POSTGRES_DB:
-    ports: 
-        - "5432:5432"
-    volumes:
-        - pgdata:/var/lib/postgresql/data
-# ------ C# Backend API ------ #
-api:
-    build: .
-    # For when the build is complete and ready to ship #
-    # image: ash/distraction-tracker:latest #
-    container_name: dotnet_api
-    
+    db:
+        image: postgres:latest
+        container_name: postgres_db
+        restart: always
+        environment:
+            POSTGRES_USER: ${DB_USER}
+            POSTGRES_PASSWORD: ${DB_PASSWORD}
+            POSTGRES_DB: ${DB_NAME}
+        ports: 
+            - "5432:5432"
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d postgres"]
+            interval: 5s
+            timeout: 5s
+            retries: 5
+        volumes:
+            - pgdata:/var/lib/postgresql
+    # ------ C# Backend API ------ #
+    api:
+        build: .
+        # For when the build is complete and ready to ship #
+        # image: ash/distraction-tracker:latest #
+        container_name: dotnet_api
+        env_file: .env
+        depends_on:
+            db:
+                condition: service_healthy
+        ports:
+            - 8080:8080
+        environment:
+            - ASPNETCORE_ENVIRONMENT=${ASPNET_ENV}
+            - ConnectionStrings__PostgresDb=${DB_CONNECTION_STRING}
+volumes:
+    pgdata:    
